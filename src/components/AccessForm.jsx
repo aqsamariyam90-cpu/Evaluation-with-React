@@ -35,7 +35,7 @@ function AccessForm() {
                     Contact us to learn more about our solutions.
                 </span>
                 <div className="access-benefits">
-                    <p>✓ Early product access</p>
+                    <p>✓ Early project access</p>
                     <p>✓ Technical documentation</p>
                     <p>✓ Expert support</p>
                 </div>

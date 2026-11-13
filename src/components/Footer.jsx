@@ -26,7 +26,7 @@ function Footer() {
             </div>
             <div className="footer-bottom">
                 <p>
-                    © 2026 SynapseCore. All rights reserved.
+                    © 2026 AgeisCore. All rights reserved.
                 </p>
                 <p>Designed for the Future of AI</p>
             </div>

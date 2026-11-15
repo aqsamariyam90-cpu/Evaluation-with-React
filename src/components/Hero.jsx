@@ -16,13 +16,20 @@ function Hero() {
                     autonomous systems.
                 </p>
                 <div className="hero-buttons">
-                    <button className="primary-btn">
-                        Access Research Weights
-                    </button>
-                    <button className="secondary-btn">
-                        Read Whitepaper
-                    </button>
-                </div>
+                <button
+                        className="primary-btn"
+                         onClick={() => {
+                           document.getElementById("benchmark").scrollIntoView({
+                                behavior: "smooth"
+                                   });
+                                          }}
+                                    >
+                                      Access Research Weights
+                                         </button>
+                 <button className="secondary-btn">
+                                     Read Whitepaper
+                                     </button>
+                                     </div>
                 <div className="hero-stats">
                     <div>
                         <h3>420M+</h3>

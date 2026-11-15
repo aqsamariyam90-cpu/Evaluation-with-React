@@ -2,10 +2,9 @@ function Footer() {
     return (
         <footer className="footer">
             <div className="footer-content">
-
                 <div className="footer-about">
                     <h3>
-                        <span className="footer-icon">🛡</span>
+                         <span className="logo-icon">A</span>
                         AegisCore Architecture
                     </h3>
                     <p>

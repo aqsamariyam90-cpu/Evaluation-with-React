@@ -869,11 +869,12 @@
         align-items: center;
         gap: 15px;
     }
-
     .nav-links a {
         font-size: 15px;
     }
-
+    .nav-links a:hover {
+    color: #5546ee;
+    }
     .nav-button {
         width: 100%;
         max-width: 200px;

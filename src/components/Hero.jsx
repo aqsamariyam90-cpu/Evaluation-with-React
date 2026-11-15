@@ -3,7 +3,7 @@ function Hero() {
         <section className="hero-section" id="home">
             <div className="hero-content">
                 <p className="hero-tag">
-                    AI POWERED TECHNOLOGY
+                    LAB Report // AI Research V5.4 // 5 Hour Exam
                 </p>
                 <h1>
                     Foundational Neural Models for

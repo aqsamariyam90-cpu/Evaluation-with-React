@@ -18,7 +18,6 @@ function App() {
             <Deployments />
             <AccessForm />
             <Footer />
-          
         </>
     );
 }

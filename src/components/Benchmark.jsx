@@ -3,59 +3,102 @@ function Benchmark() {
         {
             id: 1,
             name: "Cortex-VS",
+            description: "Dense SVD Graph",
+            parameters: "420M Parameters",
             accuracy: "99.8%",
             latency: "0.12ms",
-            parameters: "420M"
+            status: "Verified",
+            statusClass: "verified"
         },
         {
             id: 2,
             name: "Cortex-MoE UltraReasoning",
+            description: "Sparse Gated Mixture",
+            parameters: "350M Parameters",
             accuracy: "97.5%",
             latency: "0.25ms",
-            parameters: "350M"
+            status: "Verified",
+            statusClass: "verified"
         },
         {
             id: 3,
             name: "Cortex-KineticsEmbodied",
+            description: "Continuous Action Policy",
+            parameters: "280M Parameters",
             accuracy: "96.2%",
             latency: "0.40ms",
-            parameters: "280M"
+            status: "Zero-Lag",
+            statusClass: "zero-lag"
         },
         {
             id: 4,
-            name: "Legacy Industury Baseline",
+            name: "Legacy Industry Baseline",
+            description: "Standard Autoregressive",
+            parameters: "200M Parameters",
             accuracy: "94.8%",
             latency: "0.55ms",
-            parameters: "200M"
+            status: "Reference",
+            statusClass: "reference"
         }
     ];
     return (
         <section className="benchmark-section" id="benchmark">
-            <div className="section-heading">
-                <p>PERFORMANCE</p>
-                <h2>Model Benchmark And Computational Speed Matrix</h2>
-                <span>
-                    Compare the performance of our advanced
-                    AI models.
-                </span>
+            <div className="benchmark-heading">
+                <div>
+                    <p className="benchmark-label">
+                        OBJECTIVE PERFORMANCE METRICS
+                    </p>
+                    <h2>
+                        Model Benchmark & Computational Speed Matrix
+                    </h2>
+                    <span>
+                        Normalized comparisons against modern foundation
+                        standards run on identical configurations.
+                    </span>
+                </div>
+                <div className="benchmark-badge">
+                    Benchmarked @ INT4 Batch Size 1
+                </div>
             </div>
             <div className="table-container">
-                <table>
+                <table className="benchmark-table">
                     <thead>
                         <tr>
-                            <th>Model Name</th>
-                            <th>Accuracy</th>
-                            <th>Latency</th>
-                            <th>Parameters</th>
+                            <th>MODEL ARCHITECTURE</th>
+                            <th>PARAMETER SCALE</th>
+                            <th>HUMANEVAL BENCHMARK</th>
+                            <th>INFERENCE LATENCY</th>
+                            <th>VERIFICATION</th>
                         </tr>
                     </thead>
                     <tbody>
                         {models.map((item) => (
                             <tr key={item.id}>
-                                <td>{item.name}</td>
-                                <td>{item.accuracy}</td>
-                                <td>{item.latency}</td>
+                                <td>
+                                    <div className="model-name">
+                                        <span className="model-dot"></span>
+                                        <div>
+                                            <strong>{item.name}</strong>
+                                            <small>{item.description}</small>
+                                        </div>
+                                    </div>
+                                </td>
                                 <td>{item.parameters}</td>
+                                <td>
+                                    <strong className="accuracy">
+                                        {item.accuracy}
+                                    </strong>
+                                </td>
+                                <td>
+                                    <strong className="latency">
+                                        {item.latency}
+                                    </strong>
+                                </td>
+                                <td>
+                                    <span className={`status-badge ${item.statusClass}`}>
+                                        ✓ {item.status}
+                                    </span>
+                                </td>
                             </tr>
                         ))}
                     </tbody>
